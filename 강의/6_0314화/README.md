@@ -50,12 +50,14 @@ if(조건){
 
 /* switch */
 switch(조건){
-	label 조건1
+	case 조건1:
 		실행;
 		break;
-	label 조건2
+	case 조건2:
 		실행;
 		break;
+	default:
+		실행;
 }
 ```
 
