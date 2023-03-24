@@ -7,37 +7,36 @@ int main()
     printf("How many operands?: ");
     scanf("%d", &operandsQuantity);
 
-    float operandsList[operandsQuantity];
-    for (int i = 0; i < operandsQuantity; i++)
-    {
-        float inputOperand;
-        printf("Enter num %d: ", i + 1);
-        scanf("%f", &inputOperand);
-        operandsList[i] = inputOperand;
-    }
-
+    // 연산자 정하기
     char operator;
     printf("Enter an operator(+, -, *, /): ");
     scanf(" %c", &operator);
 
-    float value = operandsList[0];
+    // 첫 수 받기
+    float result;
+    printf("Enter a number 1: ");
+    scanf("%f", &result);
+
     for (int i = 1; i < operandsQuantity; i++)
     {
+        float tmp;
+        printf("Enter a number %d: ", i + 1);
+        scanf("%f", &tmp);
         switch (operator)
         {
         case '+':
-            value += operandsList[i];
+            result += tmp;
             break;
         case '-':
-            value -= operandsList[i];
+            result -= tmp;
             break;
         case '*':
-            value *= operandsList[i];
+            result *= tmp;
             break;
         case '/':
-            if (operandsList[i] != 0)
+            if (tmp != 0)
             {
-                value /= operandsList[i];
+                result /= tmp;
             }
             else
             {
@@ -51,6 +50,6 @@ int main()
         }
     }
 
-    printf("The value is: %f\n", value);
+    printf("The result is: %f\n", result);
     return 0;
 }
