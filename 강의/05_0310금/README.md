@@ -59,7 +59,7 @@ int main()
 - Identifiers: 함수명, 변수명 등
   - \_ 로 시작 가능
   - 숫자로 시작 불가
-  - - 사용 불가
+  - \- 사용 불가
   - 이미 있는 이름 사용불가(int, char, struct 등등)
 - Literals: 불변의 값(파이, e 등)
 - Comments, 주석: 설명을 위해 쓰이며 컴파일러에 의해 무시됨
