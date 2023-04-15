@@ -19,8 +19,8 @@ int main()
 
     for (int i = 0; i < quantity; i++)
     {
-	sum += numList[i];
-	sumOfSquare += (numList[i] * numList[i]);
+        sum += numList[i];
+        sumOfSquare += (numList[i] * numList[i]);
     }
 
     mean = sum / quantity;

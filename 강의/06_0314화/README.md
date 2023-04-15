@@ -28,36 +28,46 @@
 
 ```C
 /* 단일조건문 */
-if(조건){
+if (조건)
+{
 	실행;
 }
 
 /* 조건문 & else */
-if(조건){
+if (조건)
+{
 	실행;
-} else {
+}
+else
+{
 	실행;
 }
 
 /* else if */
-if(조건){
+if (조건)
+{
 	실행;
-} else if(조건){
+}
+else if (조건)
+{
 	실행;
-} else {
+}
+else
+{
 	실행;
 }
 
 /* switch */
-switch(조건){
-	case 조건1:
-		실행;
-		break;
-	case 조건2:
-		실행;
-		break;
-	default:
-		실행;
+switch (조건)
+{
+case 조건1:
+	실행;
+	break;
+case 조건2:
+	실행;
+	break;
+default:
+	실행;
 }
 ```
 

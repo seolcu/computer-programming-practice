@@ -13,15 +13,15 @@ int main()
     scanf(" %c", &operator);
 
     // 첫 수 받기
-    float result;
-    printf("Enter a number 1: ");
-    scanf("%f", &result);
+    double result;
+    printf("Enter a number 0: ");
+    scanf("%lf", &result);
 
-    for (int i = 1; i < operandsQuantity; i++)
+    for (int i = 0; i < operandsQuantity - 1; i++)
     {
-        float tmp;
-        printf("Enter a number %d: ", i + 1);
-        scanf("%f", &tmp);
+        double tmp;
+        printf("Enter a number %d: ", i);
+        scanf("%lf", &tmp);
         switch (operator)
         {
         case '+':
@@ -50,6 +50,7 @@ int main()
         }
     }
 
-    printf("The result is: %f\n", result);
+    printf("The result is: %lf\n", result);
+
     return 0;
 }

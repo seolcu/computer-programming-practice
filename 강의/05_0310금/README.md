@@ -5,9 +5,9 @@
 - Feasibility studies(실현 가능성)
 - 사용자의 필요 분석(FR(Functional Requirement) - 기능적 요구, NFR - 비기능적 요구(UI 등))
 - 설계(객체지향형 프로그래밍(OOP), 알고리즘)
-- **Implementation**(남이 만들어 놓은거: programming languages, off-the-shelf tools(데이터베이스, 네트워크 등등))
+- Implementation(남이 만들어 놓은거: programming languages, off-the-shelf tools(데이터베이스, 네트워크 등등))
 - 문서화하기(주석)
-- **테스팅**(check, validation, verification)
+- 테스팅(check, validation, verification)
   - Unit tests(큰 프로그램을 모듈로 나눠서 따로 개발)
   - Integration tests(모듈의 통합)
 - 유지보수
@@ -42,7 +42,8 @@
 ```C
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	printf("Hello world!\n");
 	return 0;
 }

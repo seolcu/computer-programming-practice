@@ -17,10 +17,12 @@ int main()
 	}
 
 	// for으로 쓰는 경우
-	// for (int i = 1; i <= n; i++)
+	/*
+	for (int i = 1; i <= n; i++)
 	// {
 	// 	res = res * i;
 	// }
+	*/
 
 	printf("factorial %d is %d\n", n, res);
 	return 0;

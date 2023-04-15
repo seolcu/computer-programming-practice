@@ -1,6 +1,4 @@
-# 온라인과제
-
-Assignment 1
+# Assignment 1
 
 Posted on: Thursday, March 23, 2023 2:00:00 PM KST
 
