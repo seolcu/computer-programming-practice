@@ -18,16 +18,16 @@ void receiveAndMakeMatrix(int row, int col, int matrix[row][col])
 
 void dotProduct(int row, int mid, int col, int matA[row][mid], int matB[mid][col], int matC[row][col])
 {
-	for (int selectedY = 0; selectedY < col; selectedY++)
+	for (int selectedY = 0; selectedY < row; selectedY++)
 	{
-		for (int selectedX = 0; selectedX < row; selectedX++)
+		for (int selectedX = 0; selectedX < col; selectedX++)
 		{
 			int tmpNum = 0;
 			for (int i = 0; i < mid; i++)
 			{
 				tmpNum += matA[selectedY][i] * matB[i][selectedX];
 			}
-			matC[selectedX][selectedY] = tmpNum;
+			matC[selectedY][selectedX] = tmpNum;
 		}
 	}
 }
