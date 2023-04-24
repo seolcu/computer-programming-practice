@@ -36,7 +36,7 @@ else
 }
 
 /* switch */
-switch (조건)
+switch (식)
 {
 case 조건1:
 	실행;
@@ -60,7 +60,7 @@ while (조건)
 }
 
 /* for loop */
-for (초기값설정; 조건; 갱신식)
+for (초기식; 조건식; 증감식)
 {
 	실행;
 }

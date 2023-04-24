@@ -58,7 +58,7 @@ else
 }
 
 /* switch */
-switch (조건)
+switch (식)
 {
 case 조건1:
 	실행;
