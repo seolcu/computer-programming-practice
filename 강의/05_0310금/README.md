@@ -54,7 +54,7 @@ int main()
 - Function, 함수: 입력값을 주면 무언가를 실행하는 코드
   - Prototype, 프로토타입(설계)
   - Definition, 정의(직접 쓰기)
-- Preprocesser, 전처리자: 필요한 라이브러리를 불러옴
+- Preprocessor, 전처리자: 필요한 라이브러리를 불러옴
   - %%stdio는 Standard input & output을 의미함. printf는 stdio에서 온 것.%%
 - Identifiers: 함수명, 변수명 등
   - \_ 로 시작 가능
