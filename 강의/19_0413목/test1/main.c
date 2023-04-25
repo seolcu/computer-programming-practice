@@ -1,33 +1,33 @@
 // 설규원 202322071
 #include <stdio.h>
 
-void receiveAndMakeMatrix(int row, int col, int matrix[row][col])
+void receiveAndMakeMatrix(int row, int col, int mtx[row][col])
 {
-	for (int j = 0; j < row; j++)
+	for (int r = 0; r < row; r++)
 	{
-		printf("-----row index %d-----\n", j);
-		for (int i = 0; i < col; i++)
+		printf("-----row index %d-----\n", r);
+		for (int c = 0; c < col; c++)
 		{
 			int tmpNum;
-			printf("Enter [%d][%d]: ", j, i);
+			printf("Enter [%d][%d]: ", r, c);
 			scanf("%d", &tmpNum);
-			matrix[j][i] = tmpNum;
+			mtx[r][c] = tmpNum;
 		}
 	}
 }
 
-void dotProduct(int row, int mid, int col, int matA[row][mid], int matB[mid][col], int matC[row][col])
+void dotProduct(int row, int mid, int col, int mtxA[row][mid], int mtxB[mid][col], int mtxC[row][col])
 {
-	for (int selectedY = 0; selectedY < row; selectedY++)
+	for (int r = 0; r < row; r++)
 	{
-		for (int selectedX = 0; selectedX < col; selectedX++)
+		for (int c = 0; c < col; c++)
 		{
 			int tmpNum = 0;
-			for (int i = 0; i < mid; i++)
+			for (int m = 0; m < mid; m++)
 			{
-				tmpNum += matA[selectedY][i] * matB[i][selectedX];
+				tmpNum += mtxA[r][m] * mtxB[m][c];
 			}
-			matC[selectedY][selectedX] = tmpNum;
+			mtxC[r][c] = tmpNum;
 		}
 	}
 }
@@ -68,11 +68,11 @@ int main()
 		// 출력
 
 		printf("\n=====result=====\n");
-		for (int j = 0; j < rowA; j++)
+		for (int r = 0; r < rowA; r++)
 		{
-			for (int i = 0; i < colB; i++)
+			for (int c = 0; c < colB; c++)
 			{
-				printf("%d\t", matrixC[j][i]);
+				printf("%d\t", matrixC[r][c]);
 			}
 			printf("\n");
 		}
@@ -82,5 +82,6 @@ int main()
 		// A의 열과 B의 행의 길이가 다름: 행렬곱 조건 불만족
 		printf("The two matrixs are not able to be multiplied\n");
 	}
+
 	return 0;
 }
