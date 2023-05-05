@@ -1,7 +1,7 @@
 // 설규원 202322071
 #include <stdio.h>
 
-void searchLargestAndSmallest(int *largest, int *smallest, int size, int array[size])
+void searchLargestAndSmallest(int *largestPt, int *smallestPt, int size, int array[size])
 {
     for (int i = 0; i < size; i++)
     {
@@ -17,11 +17,11 @@ void searchLargestAndSmallest(int *largest, int *smallest, int size, int array[s
                 isLargest = 0;
         }
 
-        // largest = &array[i]와 같은 식은 안 되니 조심! (왜 그런지는 나도 잘 몰라요! 누가 좀 알려주세요!)
+        // largestPt = &array[i]와 같은 식은 largestPt가 가르키는 주소만 바꿔줄 뿐, main함수의 largest에 영향을 주지 않으므로 조심!
         if (isLargest)
-            *largest = array[i];
+            *largestPt = array[i];
         if (isSmallest)
-            *smallest = array[i];
+            *smallestPt = array[i];
     }
 }
 
