@@ -6,10 +6,16 @@
 
 ## 추천 자율학습자료
 
-### 1. [freeCodeCamp의 C언어 강의](https://youtu.be/KJgsSFOSQv0)
+### 1. [freeCodeCamp의 C언어 기초 강의](https://youtu.be/KJgsSFOSQv0)
 
 저는 C언어를 올해 2월에 처음 배웠어요.
 그때 이 영상으로 배웠습니다.
 영어지만, 아주 쉽게 설명하세요.
 기초를 잡는 데 큰 도움이 될 겁니다.
 특히 예제가 계산기 만들기이기 때문에, 그 부분에서 막힌다면 꼭 확인하세요.
+
+### 2. [freeCodeCamp의 C언어 포인터 강의](https://youtu.be/zuegQmMdy8M)
+
+C언어의 포인터에 대해 구체적으로 설명해주는 강의입니다.
+저도 이거 보고 배우고 있어요.
+추천드립니다.
