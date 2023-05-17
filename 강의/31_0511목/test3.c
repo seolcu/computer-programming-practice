@@ -3,12 +3,12 @@
 
 int countString(char *string)
 {
-    int count = 0;
-    while (*string++)
+    int i = 0;
+    while (string[i])
     {
-        count++;
+        i++;
     }
-    return count;
+    return i;
 }
 
 int main()
