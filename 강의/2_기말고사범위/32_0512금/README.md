@@ -6,4 +6,5 @@
 ## Array of Strings
 
 - 문자의 2차원 배열이 됨
-- `char **str`
+
+(PPT 올라오면 내용 보충할 예정)
