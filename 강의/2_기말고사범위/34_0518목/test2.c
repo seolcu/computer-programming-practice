@@ -1,5 +1,5 @@
-// 설규원 202322071
 #include <stdio.h>
+#include <math.h>
 #define MAX_CHAR 100
 
 int stringLength(char *string)
@@ -16,7 +16,7 @@ int compare(int length1, int length2, char *string1, char *string2)
     {
         for (int i = 0; i < length1; i++)
         {
-            if (string1[i] != string2[i])
+            if (abs(string1[i] - string2[i]) != 32 && string1[i] != string2[i])
                 return 0;
         }
         return 1;

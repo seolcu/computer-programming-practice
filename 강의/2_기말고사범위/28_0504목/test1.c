@@ -1,4 +1,3 @@
-// 설규원 202322071
 #include <stdio.h>
 
 int *search(int target, int size, int array[size], int *isFound)

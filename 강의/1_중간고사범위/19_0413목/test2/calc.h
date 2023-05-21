@@ -1,4 +1,3 @@
-// 설규원 202322071
 #include <stdio.h>
 
 int addition(int a, int b);

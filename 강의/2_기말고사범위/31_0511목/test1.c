@@ -1,4 +1,3 @@
-// 설규원 202322071
 #include <stdio.h>
 
 void receiveAndMakeMatrix(int row, int col, int mtx[row][col])

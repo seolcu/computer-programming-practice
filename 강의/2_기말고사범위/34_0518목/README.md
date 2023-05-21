@@ -20,7 +20,7 @@ points.
    both ways. Hint, you may use the sizeof() function.
 
 ```C
-int sizeOfString(char\* string1)
+int sizeOfString(char* string1)
 ```
 
 2. Define/implement the following function declaration. The function definition compares two strings of specified lengths for equality. If the two string arguments are equal, return one; otherwise return zero. Test your function by giving examples in the main function.
