@@ -56,15 +56,23 @@ void copyStringRange(char *destination, char *target, int startIndex, int endInd
 
 int parseStringToInt(char *string)
 {
+    int sign = 1;
     int result = 0;
     for (int i = 0; string[i]; i++)
     {
-        result *= 10;
-        // ASCII: char 0 == int 48, char 1 == int 49, ..., char 9 == int 57
-        // thus, char - 48 => int number.
-        result += (string[i] - 48);
+        if (string[i] == '+')
+            sign = 1;
+        else if (string[i] == '-')
+            sign = -1;
+        else
+        {
+            result *= 10;
+            // ASCII: char 0 == int 48, char 1 == int 49, ..., char 9 == int 57
+            // thus, char - 48 => int number.
+            result += (string[i] - 48);
+        }
     }
-    return result;
+    return sign * result;
 }
 
 double parseStringToDouble(char *string)
@@ -81,9 +89,9 @@ double parseStringToDouble(char *string)
     double result = 0;
     if (isDot)
     {
-        char intPartString[whereDot], decimalPartString[lengthOfString - whereDot - 1];
+        char intPartString[whereDot], decimalPartString[lengthOfString - whereDot];
         copyStringRange(intPartString, string, 0, whereDot);
-        copyStringRange(decimalPartString, string, whereDot + 1, lengthOfString);
+        copyStringRange(decimalPartString, string, whereDot, lengthOfString);
         result = parseStringToInt(intPartString) + parseStringToInt(decimalPartString) * pow(0.1, lengthOfString - whereDot - 1);
     }
     else
@@ -95,18 +103,17 @@ double parseStringToDouble(char *string)
 
 complex parseStringToComplex(char *string)
 {
-    int lengthOfString = 0, wherePlus;
+    int lengthOfString = 0, operatorIndex;
     for (int i = 0; string[i]; i++)
     {
-        if (string[i] == '+')
-        {
-            wherePlus = i;
-        }
+        if (i != 0)
+            if (string[i] == '+' || string[i] == '-')
+                operatorIndex = i;
         lengthOfString++;
     }
-    char realPartString[wherePlus], imagPartString[lengthOfString - wherePlus - 1];
-    copyStringRange(realPartString, string, 0, wherePlus);
-    copyStringRange(imagPartString, string, wherePlus + 1, lengthOfString - 1);
+    char realPartString[operatorIndex], imagPartString[lengthOfString - operatorIndex];
+    copyStringRange(realPartString, string, 0, operatorIndex);
+    copyStringRange(imagPartString, string, operatorIndex, lengthOfString - 1);
     complex result = {parseStringToDouble(realPartString), parseStringToDouble(imagPartString)};
     return result;
 }
