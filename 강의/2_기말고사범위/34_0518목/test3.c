@@ -81,7 +81,7 @@ void sortNames(int quantity, char names[quantity][MAX_CHAR])
     }
 }
 
-// Ex. *argv[] == {"[output]", "5", "Smith,", "Abel,", "Ashok,", "David,", "Liesbet"}
+// Ex. argv == {"[output]", "5", "Smith,", "Abel,", "Ashok,", "David,", "Liesbet"}
 int main(int argc, char *argv[])
 {
     int quantity = argc - 2;
