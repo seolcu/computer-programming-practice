@@ -60,12 +60,10 @@ int main()
 
             // compare
             else if (target < nextSmallest && target > smallest)
-            {
                 nextSmallest = target;
-            }
         }
 
-        // done
+        // done(nothing is bigger than the previous smallest)
         if (nextSmallestNotDefined)
             break;
 
