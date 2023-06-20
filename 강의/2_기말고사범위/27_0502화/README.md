@@ -10,7 +10,7 @@
   ```C
   #include <stdio.h>
 
-  void *increase(int *i)
+  void increase(int *i)
   {
       (*i)++;
   }
