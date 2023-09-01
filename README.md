@@ -1,4 +1,4 @@
-# com-pu-sil
+# computer-programming-practice
 
 야레드교수님 컴퓨터프로그래밍및실습 강의 내용을 정리해보았어요
 
